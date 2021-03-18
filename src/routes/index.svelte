@@ -1,36 +1,50 @@
-<div class="video">
-	<video autoplay muted loop src="vidtext.mp4" type="video/mp4"></video>
-	<img src="logo-512.png" alt="logo deco" />
-</div>
+<script>
+	import successkid from 'images/successkid.jpg';
+</script>
+
 <style>
-	.video{
-		width:100%;
-		height:100vh;
+	h1, figure, p {
+		text-align: center;
+		margin: 0 auto;
 	}
-	.video video{
-		position:absolute;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		object-fit:cover;
+
+	h1 {
+		font-size: 2.8em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0 0 0.5em 0;
 	}
-	
-	.video img{
-		position:absolute;
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-		margin:0;
-		padding:0;
-		font-size:30vw;
-		display:flex;
-		justify-content:center;
-		align-items:center;
-		text-align:center;
-		color:#000;
-		background:#fff;
-		mix-blend-mode: screen;
+
+	figure {
+		margin: 0 0 1em 0;
+	}
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 0 1em 0;
+	}
+
+	p {
+		margin: 1em auto;
+	}
+
+	@media (min-width: 480px) {
+		h1 {
+			font-size: 4em;
+		}
 	}
 </style>
+
+<svelte:head>
+	<title>Sapper project template</title>
+</svelte:head>
+
+<h1>Great success!</h1>
+
+<figure>
+	<img alt="Success Kid" src="{successkid}">
+	<figcaption>Have fun with Sapper!</figcaption>
+</figure>
+
+<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
